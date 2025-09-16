@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>مقدمة في الحوسبة السحابية</title>
+  <meta name="description" content="موقع تعليمي بسيط لشرح مفاهيم الحوسبة السحابية: نماذج الخدمة، النشر، الأمن، وأمثلة عملية." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#60a5fa; --muted:#9aa6b2; --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Segoe UI, Tahoma, sans-serif;background:linear-gradient(180deg,#071029 0%, #071428 100%);color:#e6eef6;line-height:1.6}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;backdrop-filter: blur(6px);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#2563eb);display:flex;align-items:center;justify-content:center;font-weight:700;color:#00112b}
+    nav a{color:var(--muted);text-decoration:none;margin-left:14px}
+    nav a:hover{color:var(--accent)}
+    .container{max-width:1100px;margin:28px auto;padding:0 18px}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center}
+    .hero-card{background:var(--card);padding:22px;border-radius:14px;box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+    h1{margin:0 0 10px;font-size:28px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .cta{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#031028;font-weight:600;text-decoration:none}
+
+    .modules{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:20px}
+    .module{background:var(--glass);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .module h3{margin:0 0 8px}
+    .module p{margin:0;color:var(--muted);font-size:14px}
+
+    .resources{display:flex;gap:12px;margin-top:18px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+
+    footer{margin-top:40px;padding:22px 0;color:var(--muted);text-align:center}
+
+    /* quiz */
+    .quiz{margin-top:18px}
+    .question{background:var(--card);padding:14px;border-radius:10px;margin-bottom:10px}
+    button.opt{display:block;width:100%;text-align:right;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--muted);margin:8px 0}
+    button.opt.correct{border-color:rgba(96,165,250,0.6);background:rgba(96,165,250,0.06);color:var(--accent)}
+    button.opt.wrong{border-color:#ff7b7b;background:rgba(255,123,123,0.04);color:#ffb3b3}
+
+    /* responsive */
+    @media(max-width:880px){.hero{grid-template-columns:1fr;}.logo{width:40px;height:40px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">حس</div>
+      <div>
+        <div style="font-weight:700">تعلم الحوسبة السحابية</div>
+        <div style="font-size:12px;color:var(--muted)">دروس مبسطة للمبتدئين</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#modules">المقررات</a>
+      <a href="#tutorials">دروس</a>
+      <a href="#quiz">اختبارات</a>
+      <a href="#resources">مصادر</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <h1>ما هي الحوسبة السحابية؟</h1>
+        <p class="lead">الحوسبة السحابية هي تقديم موارد الحوسبة (خوادم، تخزين، قواعد بيانات، شبكات، برامج) عبر الإنترنت بدلًا من تشغيلها محليًا. تساعد الشركات والأفراد على التوسع، تقليل التكاليف، وتسريع النشر.</p>
+        <a class="cta" href="#modules">ابدأ المقرر الأول</a>
+
+        <div class="modules" id="modules">
+          <article class="module">
+            <h3>المقرر 1: مفاهيم أساسية</h3>
+            <p>مقدِّمة، نماذج الخدمة: IaaS، PaaS، SaaS، وأنواع النشر: عام، خاص، هجين.</p>
+          </article>
+          <article class="module">
+            <h3>المقرر 2: الشبكات والتخزين</h3>
+            <p>خدمات التخزين السحابي، CDN، VPC، وأساليب النسخ الاحتياطي.</p>
+          </article>
+          <article class="module">
+            <h3>المقرر 3: الأمن والامتثال</h3>
+            <p>الهوية وإدارة الوصول، التشفير، السياسات، وإدارة الامتثال.</p>
+          </article>
+          <article class="module">
+            <h3>المقرر 4: نشر وتكامل</h3>
+            <p>أدوات CI/CD، الحاويات (Docker)، وأوركسترا مثل Kubernetes.</p>
+          </article>
+        </div>
+
+      </div>
+
+      <aside class="card" style="padding:18px;border-radius:14px;min-height:160px">
+        <h3 id="tutorials">درس عملي: رفع موقع بسيط</h3>
+        <p style="color:var(--muted);font-size:14px">سنتعلم خطوات رفع صفحة ويب على خدمة استضافة سحابية مجانية أو عبر S3 وCloudFront كمثال عملي.</p>
+        <ol style="color:var(--muted);font-size:14px;padding-left:18px;margin-top:8px;text-align:right">
+          <li>إنشاء حساب مزود سحابي.</li>
+          <li>إنشاء حاوية/Bucket ورفع الملفات.</li>
+          <li>ضبط صلاحيات الوصول وتهيئة CDN إن رغبت.</li>
+        </ol>
+      </aside>
+    </section>
+
+    <section class="resources" id="resources">
+      <div class="card" style="flex:1">
+        <h3>مصادر ومراجع</h3>
+        <ul style="color:var(--muted);padding-left:18px;margin:8px 0;text-align:right">
+          <li>مستندات AWS/Azure/GCP الرسمية</li>
+          <li>دورات فيديو قصيرة (مبادئ)</li>
+          <li>مختبرات عملية (Hands-on labs)</li>
+        </ul>
+      </div>
+
+      <div class="card" style="width:300px">
+        <h3>ابحث عن موضوع</h3>
+        <input id="search" placeholder="ابحث عن درس أو موضوع" style="width:100%;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+        <div style="margin-top:10px;font-size:13px;color:var(--muted)">مثال: "S3" أو "Kubernetes"</div>
+      </div>
+    </section>
+
+    <section class="quiz" id="quiz">
+      <h2 style="margin-top:20px">اختبار قصير (صح أو خطأ)</h2>
+      <div class="question" data-answer="true">
+        <strong>1.</strong> تخزين البيانات في سحابة عامة يجعلها دائمًا أقل أمانًا من التخزين المحلي.
+        <div style="margin-top:10px">
+          <button class="opt" onclick="answer(this)">صح</button>
+          <button class="opt" onclick="answer(this)">خطأ</button>
+        </div>
+      </div>
+
+      <div class="question" data-answer="false">
+        <strong>2.</strong> PaaS يعني أن المزود يوفر البنية التحتية فقط، والمستخدم يدير التطبيقات بالكامل.
+        <div style="margin-top:10px">
+          <button class="opt" onclick="answer(this)">صح</button>
+          <button class="opt" onclick="answer(this)">خطأ</button>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;color:var(--muted);font-size:14px">نتيجة الاختبار ستظهر مباشرة عند اختيار إجاباتك.</div>
+    </section>
+
+    <footer>
+      © 2025 تعليم الحوسبة السحابية — صمم لهذا الغرض التعليمي. تواصل: learn-cloud@example.com
+    </footer>
+  </main>
+
+  <script>
+    function answer(btn){
+      const q = btn.closest('.question');
+      const correct = (q.dataset.answer === 'true');
+      // map: first button = صح, second = خطأ
+      const isTrueChoice = Array.from(q.querySelectorAll('button.opt')).indexOf(btn) === 0;
+      if(isTrueChoice === correct){
+        btn.classList.add('correct');
+      } else {
+        btn.classList.add('wrong');
+      }
+      // disable siblings
+      q.querySelectorAll('button.opt').forEach(b=>b.disabled=true);
+    }
+
+    // basic search hint
+    document.getElementById('search').addEventListener('keypress', function(e){
+      if(e.key === 'Enter'){
+        alert('بحث: ' + this.value + '\n(في النسخة التالية سأضيف نتائج دروس مرتبطة)');
+      }
+    });
+  </script>
+</body>
+</html>
